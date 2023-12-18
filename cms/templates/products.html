@@ -1,0 +1,96 @@
+{%extends 'base.html' %}
+{% load static%}
+
+<!-- === End of Navigation Section ==== -->
+<!-- === Start of Header Section ==== -->
+{% block content %}
+<header class="products-header">
+    <img src="{%static 'images/stars.png'%}" class="img-fluid stars" alt="stars">
+    <img src="{%static '/images/stars.png'%}" class="img-fluid stars2" alt="stars">
+
+    <div class="heading-container">
+        <h1>{{product_type}}</h1>
+    
+        
+
+    </div>
+
+
+</header>
+
+<div class="products-bar-container">
+    <div class="products-bar">
+        <h5>Showing all <span>(2)</span>results</h5>
+
+        <div class="flex-container">
+
+            <input type="text" placeholder="relavance">
+            <input type="text" placeholder="Defualt sorting">
+            
+        </div>
+    </div>
+
+</div>
+<section class="products-section">
+    <div class="container">
+        <div class="flex-container">
+           <div class="products-container">
+            <div class="card">
+                <div class="img-container">
+                    <img src="{%static 'images/banner.jpg'%}" class="img-fluid" alt="">
+
+                </div>
+                <div class="body">
+                    <h6>perfumes</h6>
+                    <h3>English Blazer</h3>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="{%static 'images/banner.jpg'%}" class="img-fluid" alt="">
+
+                </div>
+                <div class="body">
+                    <h6>perfumes</h6>
+                    <h3>English Blazer</h3>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="{%static 'images/banner.jpg'%}" class="img-fluid" alt="">
+
+                </div>
+                <div class="body">
+                    <h6>perfumes</h6>
+                    <h3>English Blazer</h3>
+
+                </div>
+            </div>
+           </div>
+           <div class="categories-container">
+            <div class="flex-container">
+                <h5>Product Categories</h5>
+                <div class="line"></div>
+            </div>
+            <ul>
+                <li><a href="">Perfumes</a></li>
+                <li><a href="">Detergents</a></li>
+                <li><a href="">Industrial Detergents</a></li>
+            </ul>
+
+           </div>
+
+        </div>
+    </div>
+
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!-- === End of Header Section ==== -->
+    {% endblock content %}

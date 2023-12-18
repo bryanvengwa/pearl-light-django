@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl Light</title>
+    {%load static%}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- delete later -->
+    <link rel="stylesheet" href="{%static 'bootstrap/css/bootstrap.min.css'%}">
+</head>
+<body>
+
+<div class="navigation-section">
+    <div class="top-section">
+        <h6>Welcome to Pearl Light Enterprises</h6>
+        <div class="social-links">
+            <a href=""><i class="fab fa-whatsapp"></i> </a>
+            <a href=""><i class="fab fa-facebook"></i> </a>
+            <a href=""><i class="fas fa-phone"></i> </a>
+    
+        </div>
+    </div>
+    <nav class="mobile-nav" >
+        <div class="flex-container">
+            <div class="logo-container">
+                <!-- <img src="./images/logo.jpg" class="img-fluid" alt="pearlsight-logo"> -->
+            </div>
+            <div class="hamburger-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <div class="bar one"></div>
+                <div class="bar two"></div>
+                <div class="bar three"></div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            <div class="img-container">
+                <img src="{% static 'images/logo-head.png' %}" class="img-fluid" alt="">
+            </div>
+          
+        </div>
+        <div class="offcanvas-body">
+          <ul class="links">
+              <li><a href="{% url 'home' %}"> <i class="fa fa-home"></i> Home</a></li>
+              <li><a href="#"><i class="fa fa-users"></i>  Who We are</a></li>
+              <div class="dropdown">
+           <li>
+            <p class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-shopping-basket"></i>  Products
+              </p>
+              <ul class="dropdown-menu">
+                
+                <li><a href="{% url 'products' products.perfumes %}" class="dropdown-item" >Perfumes</a></li>
+                <li><a href="{% url 'products'%}" class="dropdown-item" >Detergents</a></li>
+                <li><a href="{% url 'products'%}" class="dropdown-item" >Industrial</a></li>
+              </ul>
+           </li>
+       
+              </div>
+              <li><a href="#"> <i class="fa fa-envelope"></i> Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    <nav class="pc-nav" >
+       
+        <div class="section">
+            <div class="icon">
+                <img src="{% static 'images/phone.svg' %}" class="img-fluid" alt="location">
+            </div>
+            <div class="details">
+                <label>Call for enquiries</label>
+                <p>+(242) 001-748</p>
+            </div>
+        </div>
+        <div class="section left">
+            <div class="icon">
+                
+                
+                <img src="{% static 'images/alarm.svg' %}" class="img-fluid" alt="location">
+            </div>
+            <div class="details">
+                <label>Monday-Friday</label>
+                <p>0800 - 1630</p>
+            </div>
+        </div>
+        <div class="section">
+            <div class="icon">
+                
+                
+                <img src="{% static 'images/envelope.svg' %}" class="img-fluid" alt="location">
+
+            </div>
+            <div class="details">
+                <label>admin@pearllight.co.zw</label>
+                <p>Mail to us
+                </p>
+            </div>
+        </div>
+        <div class="section left">
+            <div class="icon">
+                
+
+                <img src="{%static 'images/location.svg'%}" class="img-fluid" alt="location">
+            </div>
+            <div class="details">
+                <label>8967 Stotford rd </label>
+                <p>Tynwald Harare
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="pc-links">
+        <div class="pc-links-container">
+            <li><a href="{% url 'home'%}"> <i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-users"></i>  Who We are</a></li>
+            <li><img src="{%static 'images/group-logo.png'%}" class="img-fluid" alt="logo "></li>
+            <li>
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i class="fa fa-shopping-basket" ></i> Products</a>
+                <div class="dropdown">
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'products'%}">perfumes</a></li>
+                      <li><a class="dropdown-item" href="{% url 'products'%}">Detergents</a></li>
+                      <li><a class="dropdown-item" href="{% url 'products'%}">Industrial</a></li>
+                    </ul>
+                  </div>
+            </li>
+            <li></li>
+            <li><a href="#"> <i class="fa fa-envelope"></i> Contact Us</a></li>
+        </div>
+    </ul>
+
+</div>
+
+{% block content  %}
+
+{% endblock content %}
+
+<div class="footer-section">
+
+    <footer>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>PL <span>Enterprises</span></h2>
+                    <p>we deliver high quality agrochemical products at competitve prices with professional after sales service</p>
+                    <ul>
+                        <li><h2>Open Hours</h2></li>
+                        <li><p>Monday - Friday:0800-1630</p></li>
+                        <li><p>Saturday & Sunday :Closed</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to our free Newsletter</p>
+                    <form action="" method="POST">
+                        <input type="email" placeholder="Your mail address" required>
+                        <button type="submit" > <i class="fas fa-envelope" ></i> </button>
+                    </form>
+    
+                </div>
+                <div class="col-md-3">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li> <i class="fa fa-location-arrow"></i><a href="#"> 8967 Stotford rd Tynwald Blocks</a></li>
+                        <li> <i class="fa fa-phone" ></i> <a href="tel:+242001748"> +(242) 001 748 </a></li>
+                        <li> <i class="fa fa-phone" ></i> <a href="tel:+263714276036">+263 71 427 6036</a></li>
+                        <li> <i class="fa fa-envelope"></i> <a href="mailto:admin.pearlightenterprises.co.zw">admin.pearlightenterprises.co.zw</a></li>
+    
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2>Facebook</h2>
+                    <div class="img-container">
+                        <!-- <img src="images/logo.jpg" class="img-fluid" alt=""> -->
+                    </div>
+                    <div class="flex-container">
+                        <div class="img-container">
+                            <img src="images/logo.jpg" class="img-fluid" alt="">
+                            
+                        </div>
+                        <div class="img-container">
+                            <img src="images/logo.jpg" class="img-fluid" alt="">
+    
+                        </div>
+                    </div>
+                    <a href=""><button class="facebook-button" >Follow on Facebook</button></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </footer>
+    <div class="bottom">
+        <i class="ri-copyright-fill"></i>
+        <p>Website designed by <span><a href="https://portfolio-mocha-pi.vercel.app/project">Bryan Vengwa</a></span></p>
+    </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/main.js" ></script>
+</body>
+</html>
