@@ -325,10 +325,10 @@ footer{ background: $icon; background: $dark-blue; color: white;
     }
     .flex-container{display: flex;   }
     .card{width: 19rem ; height: 20rem !important; border: none; box-shadow: 1px 3px 18px -12px #000000; border-radius: 5px;
-    .img-container{width: 19rem; background-color: green;
+    .img-container{width: 19rem; height: 75%; background-color: green;
     img{width: 100%; height: 100%; }
     }
-    .body{display: flex; flex-direction: column; gap: 0.5rem; align-items: center; justify-content: center; height: 100%; width: 100%;
+    .body{display: flex; height: 25%; flex-direction: column; gap: 0.5rem; align-items: center; justify-content: center; height: 100%; width: 100%;
     h6{color: rgba(0, 0, 0, 0.714); font-family: $poppins;}
     h3{color: $icon; font-family:$poppins; font-weight: 600; font-size: 1.3rem; }
     }

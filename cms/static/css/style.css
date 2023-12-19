@@ -833,6 +833,7 @@ footer .flex-container .img-container {
 }
 .products-section .card .img-container {
   width: 19rem;
+  height: 75%;
   background-color: green;
 }
 .products-section .card .img-container img {
@@ -841,6 +842,7 @@ footer .flex-container .img-container {
 }
 .products-section .card .body {
   display: flex;
+  height: 25%;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;

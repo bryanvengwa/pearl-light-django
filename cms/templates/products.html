@@ -20,12 +20,15 @@
 
 <div class="products-bar-container">
     <div class="products-bar">
-        <h5>Showing all <span>(2)</span>results</h5>
-
+        {% if count < 1  %}
+        <h5>There are currently no products</h5>
+        {% else %}
+        <h5>Showing all <span>({{count}})</span> results</h5>
+        {% endif %}
         <div class="flex-container">
 
-            <input type="text" placeholder="relavance">
-            <input type="text" placeholder="Defualt sorting">
+            <input type="text" placeholder="relavance" readonly>
+            <input type="text" placeholder="Defualt sorting" readonly>
             
         </div>
     </div>
@@ -35,39 +38,23 @@
     <div class="container">
         <div class="flex-container">
            <div class="products-container">
+
+            {% for product in products %}
             <div class="card">
                 <div class="img-container">
-                    <img src="{%static 'images/banner.jpg'%}" class="img-fluid" alt="">
+                    <img src="{{ product.picture.url }}" class="img-fluid" alt="{{product.name}}">
 
                 </div>
                 <div class="body">
-                    <h6>perfumes</h6>
-                    <h3>English Blazer</h3>
+                    <h6 style="text-transform: lowercase;">{{product.product_type}}</h6>
+                    <h3 style="text-transform: capitalize;" >{{ product.name }}</h3>
+                    
 
                 </div>
             </div>
-            <div class="card">
-                <div class="img-container">
-                    <img src="{%static 'images/banner.jpg'%}" class="img-fluid" alt="">
 
-                </div>
-                <div class="body">
-                    <h6>perfumes</h6>
-                    <h3>English Blazer</h3>
-
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-container">
-                    <img src="{%static 'images/banner.jpg'%}" class="img-fluid" alt="">
-
-                </div>
-                <div class="body">
-                    <h6>perfumes</h6>
-                    <h3>English Blazer</h3>
-
-                </div>
-            </div>
+            {% endfor %}
+   
            </div>
            <div class="categories-container">
             <div class="flex-container">
@@ -75,9 +62,9 @@
                 <div class="line"></div>
             </div>
             <ul>
-                <li><a href="">Perfumes</a></li>
-                <li><a href="">Detergents</a></li>
-                <li><a href="">Industrial Detergents</a></li>
+                <li><a style="text-transform: capitalize;" href="{% url 'products' product_type='Perfume' %}">Perfumes</a></li>
+                <li><a style="text-transform: capitalize;" href="{% url 'products' product_type='Detergents' %}">Detergents</a></li>
+                <li><a style="text-transform: capitalize;" href="{% url 'products' product_type='Packaging' %}">Packaging</a></li>
             </ul>
 
            </div>
