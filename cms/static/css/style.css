@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -30,8 +30,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+  overflow-x: hidden !important;
   line-height: 1;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 ol, ul {
@@ -79,41 +81,10 @@ table {
   justify-content: space-between;
 }
 
-.mobile-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
-  background: transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.208);
-  width: 100%;
-}
-.mobile-nav .flex-container {
-  width: 90%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.mobile-nav .hamburger-menu {
-  width: 3rem;
-  height: 3.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.4rem;
-}
-.mobile-nav .hamburger-menu .bar {
-  background: black;
-  transition: 0.3s;
-  height: 0.4rem;
-  border-radius: 2px;
-}
-
 .links {
   display: flex;
   flex-direction: column;
-  gap: 2.3em;
+  gap: 1em;
 }
 .links li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.277);
@@ -145,6 +116,7 @@ table {
   width: 100vw;
 }
 .slider-section .card-section {
+  display: none !important;
   overflow-y: scroll;
   z-index: 34;
   position: absolute;
@@ -439,6 +411,7 @@ table {
 header {
   height: 80vh;
   background-image: url("../images/banner.png");
+  background-repeat: no-repeat;
 }
 header .text-container {
   width: 100%;
@@ -560,13 +533,11 @@ header .text-container a {
   width: 80%;
   margin-left: 2em;
 }
-.testimonials .card .name {
+.testimonials .card .name h3 {
+  color: rgb(30, 0, 132);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
-}
-.testimonials .card .name h3 {
-  color: rgb(30, 0, 132);
 }
 
 .products {
@@ -600,9 +571,9 @@ header .text-container a {
   font-size: 1.8rem;
 }
 .products .product-card {
-  min-width: 15rem;
+  min-width: 20rem;
   height: 30rem;
-  max-width: 90vw;
+  max-width: 21rem;
   border: none;
   box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
 }
@@ -675,13 +646,13 @@ footer h2 span {
   color: rgb(23, 123, 246);
 }
 footer p {
-  line-height: 1.66em;
+  line-height: 1.4em;
   font-family: "Rubik", sans-serif;
   text-align: left;
   width: 98%;
 }
 footer ul li > a {
-  line-height: 1.66em;
+  line-height: 1.4em;
   text-decoration: none;
   font-family: "Rubik", sans-serif;
   color: white;
@@ -691,7 +662,7 @@ footer ul li > a {
 footer ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-self: flex-start;
 }
 footer ul i {
   color: rgb(23, 123, 246);
@@ -699,7 +670,6 @@ footer ul i {
 footer form {
   display: flex;
   width: 80%;
-  margin-top: 1em;
 }
 footer form input {
   width: 80%;
@@ -708,8 +678,10 @@ footer form input {
 footer form button {
   width: 20%;
   background: rgb(23, 123, 246);
-  color: white;
   height: 2.1rem;
+}
+footer form button i {
+  color: white !important;
 }
 footer form input, footer form button {
   outline: none;
@@ -717,6 +689,7 @@ footer form input, footer form button {
 }
 footer form input {
   background: rgba(255, 255, 255, 0.22);
+  border-radius: 0;
 }
 footer form input::-moz-placeholder {
   color: white;
@@ -806,6 +779,48 @@ footer .flex-container .img-container {
   display: none;
 }
 
+.products-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.products-section .categories-container-mobile {
+  display: block;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.products-section .categories-container-mobile .flex-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.products-section .categories-container-mobile .flex-container h2 {
+  font-family: "Poppins", sans-serif;
+}
+.products-section .categories-container-mobile .flex-container .line {
+  height: 3px;
+  width: 3rem;
+  background-color: rgb(23, 123, 246);
+}
+.products-section .categories-container-mobile .li {
+  border: none;
+}
+.products-section .categories-container-mobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.products-section .categories-container-mobile ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+}
+.products-section .categories-container-mobile ul li a {
+  font-family: "Poppins", sans-serif;
+  color: rgb(30, 0, 132);
+  text-decoration: none;
+}
 .products-section .flex-container {
   display: flex;
 }
@@ -846,6 +861,7 @@ footer .flex-container .img-container {
 .products-section .products-container {
   display: flex;
   gap: 1em;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 2rem;
@@ -885,6 +901,130 @@ footer .flex-container .img-container {
   text-decoration: none;
 }
 
+.contact-section {
+  background-color: rgb(244, 247, 252);
+}
+.contact-section .heading-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact-section .heading-container h1 {
+  color: rgb(30, 0, 132);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.contact-section .heading-container .line {
+  height: 4px;
+  width: 3rem;
+  background-color: rgb(23, 123, 246);
+}
+.contact-section h2 {
+  color: rgb(30, 0, 132);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.contact-section .flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1em;
+}
+.contact-section .flex-container .left {
+  align-self: center;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-section .flex-container .left .heading {
+  display: flex;
+  align-items: center;
+  color: rgb(30, 0, 132);
+  font-family: "Rubik", sans-serif;
+}
+.contact-section .flex-container .left .heading img {
+  margin-top: -5px;
+}
+.contact-section .flex-container .left .cards {
+  display: flex !important;
+  align-items: center;
+  background: white;
+  width: 19rem;
+  height: 7rem;
+}
+.contact-section .flex-container .left .cards .image-container {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section .flex-container .left .cards .image-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 60%;
+  height: 60%;
+}
+.contact-section .flex-container .left .cards .text-container {
+  width: 70%;
+  font-family: "Poppins", sans-serif;
+}
+.contact-section .flex-container .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-section .flex-container .right p {
+  color: #3a4268;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  width: 90%;
+}
+.contact-section form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-section form label {
+  color: rgb(30, 0, 132);
+  font-family: "Poppins", sans-serif;
+}
+.contact-section form input {
+  margin-bottom: 0.5em;
+}
+.contact-section form .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.contact-section form .flex-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section form textarea {
+  margin-bottom: 0.7em;
+}
+.contact-section form button {
+  background: rgb(53, 147, 214);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 65%;
+  border: none;
+  padding: 0.75em 1.75em;
+  border-radius: 5px;
+}
+
+.fixed {
+  background-color: white;
+  padding: 2em;
+  position: fixed;
+  right: 3rem;
+  top: 3rem;
+}
+
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -894,19 +1034,34 @@ M E D I A  Q U E R I E S
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Bootstrap 4 breakpoints
 */
-/* 
-Extra small devices (portrait phones, less than 576px) 
+/*
+Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .products-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .products-flex-container .product-card {
+    min-width: 21rem;
+    height: 30rem;
+    max-width: 21rem;
+  }
   .products-section .products-container {
     width: 60%;
+    justify-content: unset;
   }
   .products-section .categories-container {
     display: block;
     width: 40%;
+  }
+  .products-section .categories-container-mobile {
+    display: none;
   }
   .products-bar-container {
     display: flex;
@@ -952,9 +1107,119 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .slider-section {
     margin-top: unset;
   }
+  .contact-section .heading-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .contact-section .heading-container h1 {
+    color: rgb(30, 0, 132);
+    font-size: "Poppins", sans-serif;
+  }
+  .contact-section .heading-container .line {
+    height: 4px;
+    width: 3rem;
+    background-color: rgb(23, 123, 246);
+  }
+  .contact-section h2 {
+    color: rgb(30, 0, 132);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  .contact-section .flex-container {
+    width: 100%;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .contact-section .flex-container .left {
+    align-self: center;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+  }
+  .contact-section .flex-container .left .heading {
+    display: flex;
+    align-items: center;
+    color: rgb(30, 0, 132);
+    font-family: "Rubik", sans-serif;
+  }
+  .contact-section .flex-container .left .heading img {
+    margin-top: -5px;
+  }
+  .contact-section .flex-container .left .cards {
+    display: flex !important;
+    align-items: center;
+    background: white;
+    width: 19rem;
+    height: 7rem;
+  }
+  .contact-section .flex-container .left .cards .image-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-section .flex-container .left .cards .image-container img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 60%;
+    height: 60%;
+  }
+  .contact-section .flex-container .left .cards .text-container {
+    width: 70%;
+  }
+  .contact-section .flex-container .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+  .contact-section .flex-container .right p {
+    color: #3a4268;
+    text-align: center;
+    width: 90%;
+  }
+  .contact-section form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-section form label {
+    color: rgb(30, 0, 132);
+    font-size: "Poppins", sans-serif;
+  }
+  .contact-section form input {
+    margin-bottom: 0.5em;
+  }
+  .contact-section form .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .contact-section form .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .products-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  .products-flex-container .product-card {
+    min-width: 27rem;
+    height: 30rem;
+    max-width: 27rem;
+  }
   .pc-card2 {
     display: block !important;
   }
@@ -1047,8 +1312,132 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   header {
     margin-top: 1em;
   }
+  .contact-section .heading-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .contact-section .heading-container h1 {
+    color: rgb(30, 0, 132);
+    font-size: "Poppins", sans-serif;
+  }
+  .contact-section .heading-container .line {
+    height: 4px;
+    width: 3rem;
+    background-color: rgb(23, 123, 246);
+  }
+  .contact-section h2 {
+    color: rgb(30, 0, 132);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  .contact-section .flex-container {
+    width: 100%;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .contact-section .flex-container .left {
+    align-self: center;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+  }
+  .contact-section .flex-container .left .heading {
+    display: flex;
+    align-items: center;
+    color: rgb(30, 0, 132);
+    font-family: "Rubik", sans-serif;
+  }
+  .contact-section .flex-container .left .heading img {
+    margin-top: -5px;
+  }
+  .contact-section .flex-container .left .cards {
+    display: flex !important;
+    align-items: center;
+    background: white;
+    width: 23rem;
+    height: 7rem;
+  }
+  .contact-section .flex-container .left .cards .image-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-section .flex-container .left .cards .image-container img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 60%;
+    height: 60%;
+  }
+  .contact-section .flex-container .left .cards .text-container {
+    width: 70%;
+  }
+  .contact-section .flex-container .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+  .contact-section .flex-container .right p {
+    color: #3a4268;
+    text-align: left;
+    width: 90%;
+  }
+  .contact-section form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-section form label {
+    color: rgb(30, 0, 132);
+    font-size: "Poppins", sans-serif;
+  }
+  .contact-section form input {
+    margin-bottom: 0.5em;
+  }
+  .contact-section form .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .contact-section form .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .contact-section form .flex-container input {
+    width: 100%;
+  }
+  .contact-section form .flex-container .input-container {
+    width: 100%;
+  }
+  .contact-section form button {
+    width: 40%;
+  }
+  footer .contacts {
+    line-height: 2.1em;
+  }
 }
 /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .products-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2em;
+    justify-content: center;
+  }
+  .products-flex-container .product-card {
+    min-width: 25rem;
+    height: 30rem;
+    max-width: 28rem;
+  }
+}
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Custom media queries

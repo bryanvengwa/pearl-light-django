@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import NavbarSection
 
 # Create your views here.
 def home(request):
@@ -13,6 +12,10 @@ def home(request):
 
     return render(request, 'index.html',{'products':products})
 
-def products(request):
+def products(request, product_type):
 
-    return render(request, 'products.html', {'product_type':request.product_type})
+    return render(request, 'products.html', {'product_type':product_type})
+
+
+def contact(request):
+    return render(request, 'contact.html')

@@ -1,8 +1,16 @@
 from django.db import models
 
 # Create your models here.
-class NavbarSection(models.Model):
-    landline_number = models.CharField(max_length=15, default='+(242) 001-748')
-    working_days = models.CharField(max_length=30, default='Monday-Friday') 
-    working_hours_time = models.CharField(max_length=15, default="0800 - 1630")
-    email = models.EmailField(default='admin@pearllight.co.zw')
+
+class Product(models.Model):
+    PRODUCT_TYPE_CHOICES = [
+       ('perfume', 'Perfume'),
+       ('packaging', 'Packaging'),
+       ('detergents', 'Detergents'),
+    ]
+    name = models.CharField(max_length=70)
+    picture = models.ImageField(upload_to='products/')
+    product_type = models.CharField(max_length=20, choices=PRODUCT_TYPE_CHOICES)
+
+    def __str__(self):
+        return self.name

@@ -1,425 +1,337 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-6">
-                    <div class="text-container">
-                        <h1><span>We </span>Are Pearl Light Enterprises</h1>
-                      <a href="">Our Products</a>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-6"></div>
-            </div>
-        </div>
-
-
-    </header>
-
-<section class="slider-section">
-    <div class="card-section">
-    
-        
-        
-        <div class="card">
-           <div class="head">
-            <div class="circle">
-                <div class="img-container">
-                    <i class="fas fa-flask" ></i>
-
-                </div>
-
-            </div>
-           </div>
-           <div class="body">
-            <h2>Detergents</h2>
-            <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sit.</p>
-           </div>
-           <div class="overlay">
-
-           </div>
-        </div>
-        <div class="card">
-           <div class="head">
-            <div class="circle">
-                <div class="img-container">
-                    <i class="fas fa-flask" ></i>
-
-                </div>
-
-            </div>
-           </div>
-           <div class="body">
-            <h2>Perfumes</h2>
-            <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sit.</p>
-           </div>
-           <div class="overlay">
-
-           </div>
-        </div>
-        <div class="card">
-           <div class="head">
-            <div class="circle">
-                <div class="img-container">
-                    <i class="fas fa-flask" ></i>
-
-                </div>
-
-            </div>
-           </div>
-           <div class="body">
-            <h2>Perfumes</h2>
-            <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sit.</p>
-           </div>
-           <div class="overlay">
-
-           </div>
-        </div>
-       
-      
-            </div>
-    
-        
-    
-</section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<section class="about-us">
+<header>
     <div class="container">
         <div class="row">
-
-            <div class="col-md-6 img-holder">
-                <div class="circle">
-                    <div class="img-container">
-                        <img src="{%static 'images/banner.jpg'%}" class='img-fluid' alt="">
-                        <div class="chat"></div>
-
-                    </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="text-container about-heading">
+                    <h1><span>We </span>Are Pearl Light Enterprises</h1>
+                  <a href="#products">Our Products</a>
                 </div>
-                <br>
             </div>
-            <div class="col-md-6">
-                <div class="text-container">
-                <div class="heading">
-                    <span><img src="{%static 'images/green-stars.svg' %}" class="img-fluid" alt=""></span>           
-                    <h3> About Pearlight Enterprises</h3>
-                </div>
-                
-                <h2> <span class="bold" >Why Choose </span>PL Products</h2>
-                <br>
-                <p>
-                    Pearl light enterprises is a major supplier in Zimbabwe. Our goal is to supply quality products at competitive prices while offering reliable and flexible service to our valued customers at all the times. The management policy is centered around ‘customer satisfaction’. To this effect we have invested substantially to bring quality products to our customers. 
-                </p>
-                
-                </div>
+            <div class="col-md-12 col-lg-6"></div>
+        </div>
+    </div>
+
+
+</header>
+
+
+<div id="about" ></div>
+<section class="about-us">
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12 col-lg-6 img-holder">
+            <img src="{% static 'images/about-us.jpg' %}" class='img-fluid' alt="">
+            <br>
+        </div>
+        <div class="col-md-12 col-lg-6 d-flex justify-content-center text-md-start">
+            <div class="text-container">
+            <div class="heading">
+                <span><img src="{% static 'green-stars.svg' %}" class="img-fluid" alt=""></span>           
+                <h3> About Pearlight Enterprises</h3>
+            </div>
+            
+            <h2> <span class="bold" >Why Choose </span>PL Products</h2>
+            <br>
+            <p>
+                Pearl light enterprises is a major supplier in Zimbabwe. Our goal is to supply quality products at competitive prices while offering reliable and flexible service to our valued customers at all the times. The management policy is centered around ‘customer satisfaction’. To this effect we have invested substantially to bring quality products to our customers. 
+            </p>
+            
             </div>
         </div>
     </div>
+</div>
 </section>
 
 <br><br>
-<br><br>
-<br><br>
+
+
 
 <section class="mini-products">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 card-container">
-                <div class="card">
-                    <div class="icon-container">
-                        <i class="fa fa-flask"></i>
-                        
-                    </div>
-                    <div class="text-container">
-                        <h2>Perfumes</h2>
-                        <p>Simply perfect and unique scents</p>
-
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-5 col-lg-4 card-container">
+            <div class="card">
+                <div class="icon-container">
+                    <i class="fa fa-flask"></i>
                     
-                    <i class="fa fa-arrow-down arrow" ></i>
                 </div>
-                <div class="card">
-                    <div class="icon-container">
-                        <i class="fa fa-soap"></i>
-                        
-                    </div>
-                    <div class="text-container">
-                        <h2>Detergents</h2>
-                        <p>For that sparkle clean environment</p>
+                <div class="text-container">
+                    <h2>Perfumes</h2>
+                    <p>Simply perfect and unique scents</p>
 
-                    </div>
-                    
-                    <i class="fa fa-arrow-down arrow" ></i>
                 </div>
-                <div class="card">
-                    <div class="icon-container">
-                        <i class="fa fa-money-bill"></i>
-                        
-                    </div>
-                    <div class="text-container">
-                        <h2>Cost-Effectiveness</h2>
-                        <p>Value is guranteed for your money</p>
+                
+                <i class="fa fa-arrow-down arrow" ></i>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <i class="fa fa-soap"></i>
+                    
+                </div>
+                <div class="text-container">
+                    <h2>Detergents</h2>
+                    <p>For that sparkle clean environment</p>
 
-                    </div>
+                </div>
+                
+                <i class="fa fa-arrow-down arrow" ></i>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <i class="fa fa-money-bill"></i>
                     
-                    <i class="fa fa-arrow-down arrow" ></i>
                 </div>
-             </div>
-             <div class="col-md-4">
-                <div class="img-container">
-                    <img src="{%static 'images/lady.png'%}" alt="" class="img-fluid">
-                </div>
-             </div>
-             <div class="col-md-4 card-container ">
-                <div class="card left">
-                    <div class="icon-container">
-                        <i class="fa fa-newspaper"></i>
-                        
-                    </div>
-                    <div class="text-container">
-                        <h2>NewsLetter</h2>
-                        <p>Be sure to subscribe to our newsletter</p>
+                <div class="text-container">
+                    <h2>Cost-Effectiveness</h2>
+                    <p>Value is guranteed for your money</p>
 
-                    </div>
-                    
-                    <i class="fa fa-arrow-down arrow" ></i>
                 </div>
-                <div class="card left">
-                    <div class="icon-container">
-                        <i class="fab fa-facebook"></i>
-                        
-                    </div>
-                    <div class="text-container">
-                        <h2>Facebook</h2>
-                        <p>Like our facebook page for latest information</p>
+                
+                <i class="fa fa-arrow-down arrow" ></i>
+            </div>
+         </div>
+         <div class="col-md-6 mt-5 col-lg-4">
+            <div class="img-container">
+                <img src="{%static 'images/lady.png' %}" alt="" class="img-fluid">
+            </div>
+         </div>
+         <div class="col-md-12 mt-5 col-lg-4 card-container ">
+            <div class="card left">
+                <div class="icon-container">
+                    <i class="fa fa-newspaper"></i>
+                    
+                </div>
+                <div class="text-container">
+                    <h2>NewsLetter</h2>
+                    <p>Be sure to subscribe to our newsletter</p>
 
-                    </div>
-                    
-                    <i class="fa fa-arrow-down arrow" ></i>
                 </div>
-                <div class="card left">
-                    <div class="icon-container">
-                        <i class="fa fa-headphones-alt"></i>
-                        
-                    </div>
-                    <div class="text-container">
-                        <h2>Support</h2>
-                        <p>We offer round the clock support services</p>
+                
+                <i class="fa fa-arrow-down arrow" ></i>
+            </div>
+            <div class="card left">
+                <div class="icon-container">
+                    <i class="fab fa-facebook"></i>
+                    
+                </div>
+                <div class="text-container">
+                    <h2>Facebook</h2>
+                    <p>Like our facebook page for latest information</p>
 
-                    </div>
-                    
-                    <i class="fa fa-arrow-down arrow" ></i>
                 </div>
-             </div>
+                
+                <i class="fa fa-arrow-down arrow" ></i>
+            </div>
+            <div class="card left">
+                <div class="icon-container">
+                    <i class="fa fa-headphones-alt"></i>
+                    
+                </div>
+                <div class="text-container">
+                    <h2>Support</h2>
+                    <p>We offer round the clock support services</p>
+
+                </div>
+                
+                <i class="fa fa-arrow-down arrow" ></i>
+            </div>
+         </div>
 `
-        </div>
     </div>
+</div>
 </section>
 
 <section class="testimonials">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!-- <img src="images/testimonials.jpg" alt=""> -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1 col-lg-3 "></div>
-            <div class="col-md-5 col-lg-3" >
-                <div class="heading">
-                    <!-- <span><img src="images/green-stars.svg" class="img-fluid" alt=""></span>            -->
-                    <h3><span class="bold" >We Welcome Our </span> client’s reviews.</h3>
-                </div>
-              
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- <img src="images/testimonials.jpg" alt=""> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 col-lg-3 "></div>
+        <div class="col-md-5 col-lg-3" >
+            <div class="heading">
+                <!-- <span><img src="images/green-stars.svg" class="img-fluid" alt=""></span>            -->
+                <h3><span class="bold" >We Welcome Our </span> client’s reviews.</h3>
             </div>
-            <div class="col-md-5 col-lg-3 ">
-                <p>We value the continued support we get from our farmers and we are humbled by the endearing reviews which bare testament to the strides we have made in helping farmers achieve their dreams. </p>
-            </div>
-            <div class="col-md-1 col-lg-3 "></div>
+          
         </div>
+        <div class="col-md-5 col-lg-3 ">
+            <p>We value the continued support we get from our customers and we are humbled by the endearing reviews which bare testament to the strides we have made in helping clients achieve their dreams. </p>
+        </div>
+        <div class="col-md-1 col-lg-3 "></div>
+    </div>
 
-        <br><br><br>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 ">
-                <div class="card">
-                    <br>
-                    <br>
-                    <p><span class="quote">“</span> </p>
-                    <p>    The PL team has excellent customer service everytime we make an order they deliver on time 
-                        and at times even go beyond promised. I will always choose PL enterprises</p>
-                        <div class="flex-container">
-                       
-                        <div class="circle">
-                            <div class="img-container">
-                                <img src="{%static 'images/logo-head.png'%}" alt="">
-                            </div>
+    <br><br><br>
+    <div class="row">
+        <div class="col-md-6 col-lg-4 ">
+            <div class="card">
+                <br>
+                <br>
+                <p><span class="quote">“</span> </p>
+                <p>    The PL team has excellent customer service everytime we make an order they deliver on time 
+                    and at times even go beyond promised. I will always choose PL enterprises</p>
+                    <div class="flex-container">
+                   
+                    <div class="circle">
+                        <div class="img-container">
+                            <img src="{% static 'images/logo-head.png' %}" alt="">
                         </div>
-                        <div class="name">
-                            <h3>Dexter Kawanza</h3>
-                            
-                        </div>
+                    </div>
+                    <div class="name">
+                        <h3>Dexter Kawanza</h3>
+                        
+                    </div>
+                    <!-- <div class="img-container">
+                        <img src="images/three.png" class="img-fluid" alt="rating-stars">
+                    </div> -->
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+            <div class="card pc-card ">
+                <br>
+                <br>
+                <p><span class="quote">“</span> </p>
+                <p>    The PL team has excellent customer service everytime we make an order they deliver on time 
+                    and at times even go beyond promised. I will always choose PL enterprises</p>
+                    <div class="flex-container">
                         <!-- <div class="img-container">
                             <img src="images/three.png" class="img-fluid" alt="rating-stars">
                         </div> -->
+                    <div class="circle">
+                        <div class="img-container">
+                            <img src="{% static 'images/logo-head.png' %}" alt="">
                         </div>
+                    </div>
+                    <div class="name">
+                        <h3>Tinashe Chipfuwo</h3>
+                        
+                    </div>
+                    </div>
 
-                </div>
             </div>
-            <div class="col-md-6 col-lg-4 ">
-                <div class="card pc-card ">
-                    <br>
-                    <br>
-                    <p><span class="quote">“</span> </p>
-                    <p>    The PL team has excellent customer service everytime we make an order they deliver on time 
-                        and at times even go beyond promised. I will always choose PL enterprises</p>
-                        <div class="flex-container">
-                            <!-- <div class="img-container">
-                                <img src="images/three.png" class="img-fluid" alt="rating-stars">
-                            </div> -->
-                        <div class="circle">
-                            <div class="img-container">
-                                <img src="{%static 'images/logo-head.png'%}" alt="">
-                            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+            <div class="card pc-card2">
+                <br>
+                <br>
+                <p><span class="quote">“</span> </p>
+                <p>    The PL team has excellent customer service everytime we make an order they deliver on time 
+                    and at times even go beyond promised. I will always choose PL enterprises</p>
+                    <div class="flex-container">
+                        <!-- <div class="img-container">
+                            <img src="images/three.png" class="img-fluid" alt="rating-stars">
+                        </div> -->
+                    <div class="circle">
+                        <div class="img-container">
+                            <img src="{% static 'images/logo-head.png' %}" alt="">
                         </div>
-                        <div class="name">
-                            <h3>Tinashe Chipfuwo</h3>
-                            
-                        </div>
-                        </div>
+                    </div>
+                    <div class="name">
+                        <h3>Tatenda Matibhi</h3>
+                        
+                    </div>
+                    </div>
 
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 ">
-                <div class="card pc-card2">
-                    <br>
-                    <br>
-                    <p><span class="quote">“</span> </p>
-                    <p>    The PL team has excellent customer service everytime we make an order they deliver on time 
-                        and at times even go beyond promised. I will always choose PL enterprises</p>
-                        <div class="flex-container">
-                            <!-- <div class="img-container">
-                                <img src="images/three.png" class="img-fluid" alt="rating-stars">
-                            </div> -->
-                        <div class="circle">
-                            <div class="img-container">
-                                <img src="{%static 'images/logo-head.png'%}" alt="">
-                            </div>
-                        </div>
-                        <div class="name">
-                            <h3>Tatenda Matibhi</h3>
-                            
-                        </div>
-                        </div>
-
-                </div>
             </div>
         </div>
     </div>
-    <br><br><br>
-        <br>
+</div>
+<br><br><br>
     <br>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+<br>
 </section>
 
+<div id="products" ></div>
 <div class="products">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1 col-lg-3"></div>
-            <div class="col-md-5 col-lg-3 flex-container">
-                <div class="heading">
-                    <span><img src="{%static 'images/green-stars.svg' %}" class="img-fluid" alt=""></span>           
-                    <h3>Our Products</h3>
-                </div>
-                <h3><span>Learn about PL-</span> <br> Products</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 col-lg-3"></div>
+        <div class="col-md-5 col-lg-3 flex-container">
+            <div class="heading">
+                <span><img src="{% static 'images/green-stars.svg' %}" class="img-fluid" alt=""></span>           
+                <h3>Our Products</h3>
             </div>
-            <div class="col-md-5 col-lg-3 flex-container">
-               <p> Follow our latest news and thoughts which focuses exclusively on Home Improovements</p>
-            </div>
-            <div class="col-md-1 col-lg-3"></div>
+            <h3><span>Learn about PL-</span> <br> Products</h3>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="product-card">
-                    <div class="img-container">
-                        <img src="{%static 'images/banner.jpg' %}" class="img-fluid" alt="product">
-    
-                    </div>
-                    <div class="body">
-                        <h4> <i class="fa fa-user"></i> ADMIN</h4>
-                        <h2>Dishwashing liquid</h2>
-                        <div class="button-container">
-                            See More <div class="icon-container"><i class="fa fa-plus" ></i></div>
-                        </div>
-                    </div>
-                  
-
-    
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="product-card">
-                    <div class="img-container">
-                        <img src="{%static 'images/banner.jpg' %}" class="img-fluid" alt="product">
-    
-                    </div>
-                    <div class="body">
-                        <h4> <i class="fa fa-user"></i> ADMIN</h4>
-                        <h2>Dishwashing liquid</h2>
-                        <div class="button-container">
-                            See More <div class="icon-container"><i class="fa fa-plus" ></i></div>
-                        </div>
-                    </div>
-                  
-
-    
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="product-card">
-                    <div class="img-container">
-                        <img src="{%static 'images/banner.jpg' %}" class="img-fluid" alt="product">
-    
-                    </div>
-                    <div class="body">
-                        <h4> <i class="fa fa-user"></i> ADMIN</h4>
-                        <h2>Dishwashing liquid</h2>
-                        <div class="button-container">
-                            See More <div class="icon-container"><i class="fa fa-plus" ></i></div>
-                        </div>
-                    </div>
-                  
-
-    
-                </div>
-            </div>
-            <!--  -->
+        <div class="col-md-5 col-lg-3 flex-container">
+           <p> Follow our latest news and thoughts which focuses exclusively on providing the best products</p>
         </div>
+        <div class="col-md-1 col-lg-3"></div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="products-flex-container ">
+        <div class="some">
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="{% static 'images/dishwash.jpg' %}" class="img-fluid" alt="product">
+
+                </div>
+                <div class="body">
+                    <h4> <i class="fa fa-user"></i> ADMIN</h4>
+                    <h2>Detergents</h2>
+                    <div class="button-container">
+                        See More <div class="icon-container"><i class="fa fa-plus" ></i></div>
+                    </div>
+                </div>
+              
+
+
+            </div>
+        </div>
+        <div class="some">
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="{% static 'images/perfumes.jpg'%}" class="img-fluid" alt="product">
+
+                </div>
+                <div class="body">
+                    <h4> <i class="fa fa-user"></i> ADMIN</h4>
+                    <h2>Perfumes</h2>
+                    <div class="button-container">
+                        See More <div class="icon-container"><i class="fa fa-plus" ></i></div>
+                    </div>
+                </div>
+              
+
+
+            </div>
+        </div>
+        <div class="some">
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="{%static 'images/packaging.jpg' %}" class="img-fluid" alt="product">
+
+                </div>
+                <div class="body">
+                    <h4> <i class="fa fa-user"></i> ADMIN</h4>
+                    <h2>Packaging</h2>
+                    <div class="button-container">
+                        See More <div class="icon-container"><i class="fa fa-plus" ></i></div>
+                    </div>
+                </div>
+              
+
+
+            </div>
+        </div>
+        <!--  -->
+    </div>
+</div>
 </div>
 {% endblock content %}

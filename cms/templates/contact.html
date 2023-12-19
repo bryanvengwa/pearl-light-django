@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<header class="products-header">
+    <img src="{% static 'images/stars.png' %}" class="img-fluid stars" alt="stars">
+    <img src="{% static 'images/stars.png' %}" class="img-fluid stars2" alt="stars">
+
+    <div class="heading-container">
+        <h1>Get In Touch</h1>
+    
+        
+
+    </div>
+
+
+</header>
+
+<section class="contact-section" >
+    <br>
+    <br>
+    <div class="flex-container">
+        <div class="left">
+            <!-- <h2>Find us easily</h2> -->
+
+            <div class="cards">
+                <div class="image-container">
+                    <img src="{% static 'images/location.svg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="text-container">
+                    <p>
+                       Tynwald Harare <br>  8967 Stotford rd  
+                       </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image-container">
+                    <img src="{% static 'images/headphones.svg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="text-container">
+                    <p>
+                       Sales<br>  +263 71 427 6036
+                       </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image-container">
+                    <img src="{% static 'images/phone.svg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="text-container">
+                    <p>
+                      General Enquiries<br>  +242 001 748 
+                       </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image-container">
+                    <img src="{% static 'images/envelope.svg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="text-container">
+                    <p>
+                       Mail to us <br>  admin@pearllight.co.zw
+                       </p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="heading-container">
+                <h1>Send Us a Message</h1>
+                <div class="line"></div>
+            </div>
+            <br>
+            <p>We would love to hear from you what you have to say. Our team is waiting to give you a response.</p>
+            <br>
+            <form action="">
+                <div class="flex-container">
+                    <div class="input-container">
+                        <label for="name">Name (required)</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="text" class="form-control" id="phone" name="phone" >
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email Address (required)</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="message">Your message*</label>
+                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <button type="submit" >Send message</button>
+            </form>
+        </div>
+
+
+    </div>
+
+ <br>
+ <br>
+ <br>
+ {% endblock content %}
