@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cms',
 ]
+JAZZMIN_SETTINGS = {
+   "site_title": "Perlite",
+   "site_header": "Perlite",
+   "site_brand": "Perlite Enterprises",
+   "site_icon": "images/logo-head.png",
+    "site_logo": "images/logo-head.png",
+   # Add your own branding here
+   "site_logo": None,
+   "welcome_sign": "Welcome to Perlite",
+   # Copyright on the footer
+   "copyright": "Perlite",
+   "user_avatar": None,
+      "usermenu_links": [
+       # other links...
+       {"name": "Logout here", "url": "home", "new_window": False},
+   ],
+   # other settings...
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

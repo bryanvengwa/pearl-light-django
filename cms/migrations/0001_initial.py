@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('landline_number', models.CharField(default='+(242) 001-748', max_length=15)),
                 ('working_days', models.CharField(default='Monday-Friday', max_length=30)),
                 ('working_hours_time', models.CharField(default='0800 - 1630', max_length=15)),
-                ('email', models.EmailField(default='admin@pearllight.co.zw', max_length=254)),
+                ('email', models.EmailField(default='admin@perlite.co.zw', max_length=254)),
             ],
         ),
     ]
